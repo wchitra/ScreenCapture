@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="org.apache.cordova.plugin.screencapture"
-    version="1.0.0">
+    version="0.1.0">
 
     <name>Screen Capture</name>
 	<engines>
@@ -9,15 +9,19 @@
 	</engines>
 	
     <asset src="www/screencapture.js" target="screencapture.js" />
-   
+   <js-module src="www/screencapture.js" name="ScreenCapture">
+   	<clobbers target="ScreenCapture" />
+   </js-module>
 
     <!-- android -->
     <platform name="android">
     	<source-file src="src/android/ScreenCapture.java" target-dir="src/org/apache/cordova/plugin" />
 
         <!-- Cordova >= 2.0.0 -->
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="ScreenCapture" value="org.apache.cordova.plugin.ScreenCapture"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ScreenCapture">
+            	<param name="android-package" value="org.apache.cordova.plugin.ScreenCapture"/>
+            </feature>
         </config-file>
 
     </platform>
@@ -25,8 +29,11 @@
     <platform name="ios">
 
         <!-- Cordova >= 2.3 -->
-        <config-file target="config.xml" parent="plugins">
-            <plugin name="ScreenCapture" value="CDVScreenCapture"/>
+        <config-file target="config.xml" parent="/*">
+        <fature name="ScreenCapture">
+        <param  name="ios-package" value="CDVScreenCapture"/>	
+        </fature>
+            
         </config-file>
 
         <header-file src="src/ios/CDVScreenCapture.h" />
