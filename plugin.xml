@@ -30,9 +30,9 @@
 
         <!-- Cordova >= 2.3 -->
         <config-file target="config.xml" parent="/*">
-        <fature name="ScreenCapture">
+        <feature name="ScreenCapture">
         <param  name="ios-package" value="CDVScreenCapture"/>	
-        </fature>
+        </feature>
             
         </config-file>
 
