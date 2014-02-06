@@ -30,7 +30,7 @@
         </config-file>
 
         <header-file src="src/ios/CDVScreenCapture.h" />
-        <source-file src="src/iosCDVScreenCapture.m" />
+        <source-file src="src/ios/CDVScreenCapture.m" />
         
     </platform>
 </plugin>
