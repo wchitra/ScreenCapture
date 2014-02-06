@@ -29,8 +29,8 @@
             <plugin name="ScreenCapture" value="CDVScreenCapture"/>
         </config-file>
 
-        <header-file src="CDVScreenCapture.h" />
-        <source-file src="CDVScreenCapture.m" />
+        <header-file src="src/ios/CDVScreenCapture.h" />
+        <source-file src="src/iosCDVScreenCapture.m" />
         
     </platform>
 </plugin>
